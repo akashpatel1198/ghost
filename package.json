@@ -11,7 +11,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "server": "nodemon server/server.js"
+    "server": "node server/server.js"
   },
   "repository": {
     "type": "git",

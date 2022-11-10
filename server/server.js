@@ -40,6 +40,8 @@ app.use((err, req, res, next) => {
 })
 
 //listen on port
-app.listen(3000, () => {
-  console.log('listening on 3000 on server R')
+const PORT = process.env.PORT || 3000
+
+app.listen(PORT, () => {
+  console.log('listening on ' + PORT)
 })
