@@ -4,6 +4,13 @@ const regionController = {
   currentRegion: { region: "us-west-1" }
 };
 
+process.env.accessKey ? 
+regionController.currentRegion.accessKeyId = process.env.accessKey : 
+null;
+process.env.secretKey ? 
+regionController.currentRegion.secretAccessKey = process.env.secretKey : 
+null;
+
 regionController.changeRegion = (req, res, next) => {
   try {
     const newRegion = req.body.region;
