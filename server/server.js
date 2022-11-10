@@ -10,6 +10,15 @@ const priceRouter = require('./routes/priceRouter')
 const permissionRouter = require('./routes/permissionRouter')
 const logRouter = require('./routes/logRouter')
 
+//set up configuration
+const regionController = require('./controllers/regionController')
+process.env.accessKey ? 
+regionController.currentRegion.accessKeyId = process.env.accessKey : 
+null;
+process.env.secretKey ? 
+regionController.currentRegion.secretAccessKey = process.env.secretKey : 
+null;
+
 //define routes
 app.get('/', 
   (req, res) => {
