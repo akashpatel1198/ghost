@@ -19,6 +19,10 @@ process.env.secretKey ?
 regionController.currentRegion.secretAccessKey = process.env.secretKey : 
 null;
 
+//log the process.env
+console.log('The process.env is: ')
+console.log(process.env)
+
 //define routes
 app.get('/', 
   (req, res) => {
