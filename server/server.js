@@ -11,6 +11,12 @@ const permissionRouter = require('./routes/permissionRouter')
 const logRouter = require('./routes/logRouter')
 
 //define routes
+app.get('/', 
+  (req, res) => {
+    res.status(200).send('Cloud Server Online')
+  }
+)
+
 app.use('/main', mainRouter)
 
 app.use('/metric', metricRouter)
